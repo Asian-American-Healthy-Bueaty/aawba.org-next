@@ -1,21 +1,17 @@
 import Image from 'next/image'
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { routing } from '@/i18n/routing'
 import logo from '@/assets/logo1.png'
 
 export default function Footer() {
   const t = useTranslations()
-  const locale = useLocale()
-  const homeHref = locale === routing.defaultLocale ? '/' : `/${locale}`
-
   const EXPLORE_LINKS = [
-    { key: 'header.nav.about', href: `${homeHref}#about` },
+    { key: 'header.nav.about', href: '/#about' },
     { key: 'header.nav.activities', href: '/activities' },
   ]
 
   const ORGANIZATION_LINKS = [
-    { key: 'header.nav.leadership', href: `${homeHref}#leadership` },
+    { key: 'header.nav.leadership', href: '/#leadership' },
     { key: 'header.cta', href: '/contact' },
   ]
 

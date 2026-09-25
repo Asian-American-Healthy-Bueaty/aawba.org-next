@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 import { Link, usePathname, useRouter } from '@/i18n/navigation'
-import { routing } from '@/i18n/routing'
 import logo from '@/assets/logo1.png'
 
 const LANGUAGES = [
@@ -69,8 +68,9 @@ function useScrollSpy(hashes: string[], enabled: boolean) {
 }
 
 const navLinkBase =
-  'inline-block rounded-md px-2.5 py-2 text-xs font-bold tracking-[0.02em] text-text-h uppercase no-underline whitespace-nowrap transition-colors hover:bg-green-dark/8'
-const navLinkActive = 'bg-green-dark text-white hover:bg-green-dark'
+  'inline-block rounded-md px-2.5 py-2 text-xs font-bold tracking-[0.02em] uppercase no-underline whitespace-nowrap transition-colors'
+const navLinkIdle = 'text-text-h hover:bg-green-dark/8'
+const navLinkActive = 'bg-green-dark text-white'
 
 function NavItem({
   link,
@@ -79,7 +79,6 @@ function NavItem({
   isMobile,
   t,
   pathname,
-  homeHref,
 }: {
   link: (typeof NAV_LINKS)[number]
   activeHash: string | null
@@ -87,14 +86,14 @@ function NavItem({
   isMobile?: boolean
   t: ReturnType<typeof useTranslations>
   pathname: string
-  homeHref: string
 }) {
   const [open, setOpen] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
 
   if ('hash' in link) {
     const isActive = activeHash === link.hash
     return (
-      <Link href={`${homeHref}${link.hash}`} className={`${navLinkBase} ${isActive ? navLinkActive : ''}`}>
+      <Link href={`/${link.hash}`} className={`${navLinkBase} ${isActive ? navLinkActive : navLinkIdle}`}>
         {label}
       </Link>
     )
@@ -104,10 +103,23 @@ function NavItem({
   const isActive = isHome ? pathname === '/' && !activeHash : pathname === link.path || pathname.startsWith(`${link.path}/`)
 
   if ('children' in link && link.children) {
+    // Hide the hover/focus dropdown after a click; it re-arms once the pointer leaves.
+    const dismiss = (event: React.MouseEvent<HTMLAnchorElement>) => {
+      setDismissed(true)
+      event.currentTarget.blur()
+    }
+
     return (
-      <div className={`relative inline-flex items-center${isMobile && open ? ' flex-col items-stretch w-full' : ''}`}>
+      <div
+        className={`relative inline-flex items-center${isMobile && open ? ' flex-col items-stretch w-full' : ''}`}
+        onMouseLeave={isMobile ? undefined : () => setDismissed(false)}
+      >
         <div className={`flex items-center${isMobile ? ' justify-between' : ''}`}>
-          <Link href={link.path} className={`${navLinkBase} ${isActive ? navLinkActive : ''}${isMobile ? ' flex-1' : ''}`}>
+          <Link
+            href={link.path}
+            className={`${navLinkBase} ${isActive ? navLinkActive : navLinkIdle}${isMobile ? ' flex-1' : ''}`}
+            onClick={isMobile ? undefined : dismiss}
+          >
             {label}
           </Link>
           <button
@@ -124,14 +136,22 @@ function NavItem({
           className={
             isMobile
               ? `${open ? 'block' : 'hidden'} py-1 pl-5`
-              : 'absolute top-full left-0 z-20 min-w-[180px] -translate-y-1.5 rounded-[10px] border border-border bg-white p-1.5 opacity-0 invisible shadow-[0_12px_28px_rgba(31,59,44,0.14)] transition-[opacity,transform,visibility] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100'
+              : `absolute top-full left-0 z-20 min-w-[180px] -translate-y-1.5 rounded-[10px] border border-border bg-white p-1.5 opacity-0 invisible shadow-[0_12px_28px_rgba(31,59,44,0.14)] transition-[opacity,transform,visibility] ${
+                  dismissed
+                    ? ''
+                    : 'group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100'
+                }`
           }
         >
           {link.children.map((child) => {
             const childActive = pathname === child.path
             return (
               <li key={child.key}>
-                <Link href={child.path} className={`block ${navLinkBase} ${childActive ? navLinkActive : ''}`}>
+                <Link
+                  href={child.path}
+                  className={`block ${navLinkBase} ${childActive ? navLinkActive : navLinkIdle}`}
+                  onClick={isMobile ? undefined : dismiss}
+                >
                   {t(`header.nav.${child.key}`)}
                 </Link>
               </li>
@@ -143,7 +163,7 @@ function NavItem({
   }
 
   return (
-    <Link href={link.path} className={`${navLinkBase} ${isActive ? navLinkActive : ''}`}>
+    <Link href={link.path} className={`${navLinkBase} ${isActive ? navLinkActive : navLinkIdle}`}>
       {label}
     </Link>
   )
@@ -221,8 +241,6 @@ function LanguageSwitcher({ className = '' }: { className?: string }) {
 
 export default function Header() {
   const t = useTranslations()
-  const locale = useLocale()
-  const homeHref = locale === routing.defaultLocale ? '/' : `/${locale}`
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
   const [menuPathname, setMenuPathname] = useState(pathname)
@@ -258,7 +276,6 @@ export default function Header() {
                   label={t(`header.nav.${link.key}`)}
                   t={t}
                   pathname={pathname}
-                  homeHref={homeHref}
                 />
               </li>
             ))}
@@ -313,7 +330,6 @@ export default function Header() {
                   isMobile
                   t={t}
                   pathname={pathname}
-                  homeHref={homeHref}
                 />
               </li>
             ))}
