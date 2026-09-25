@@ -1,0 +1,303 @@
+{
+  "header": {
+    "nav": {
+      "home": "首页",
+      "about": "关于我们",
+      "ourWork": "我们的工作",
+      "activities": "活动",
+      "leadership": "领导团队与治理",
+      "resources": "资源",
+      "community": "社区",
+      "membership": "会员",
+      "support": "支持我们"
+    },
+    "cta": "联系我们 / 参与其中",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "homeAriaLabel": "AAWBA 首页",
+    "logoAlt": "AAWBA 标志",
+    "languageAriaLabel": "选择语言"
+  },
+  "footer": {
+    "ctaHeading": "携手共建更健康、更自信的社区。",
+    "tagline": "团结就是力量。",
+    "donate": "捐赠",
+    "getInvolved": "参与其中",
+    "seeUpcomingEvents": "查看近期活动",
+    "brandDesc": "亚裔美国人健康与美丽协会——致力于促进健康、自信与社区凝聚力。",
+    "exploreHeading": "探索",
+    "organizationHeading": "组织",
+    "privacyDisclaimer": "隐私与免责声明",
+    "contactHeading": "联系方式",
+    "addressLine": "100 Galen St #204, Watertown MA 02472",
+    "copyright": "美国亚裔健康与美丽协会是501(c)(3) 非营利组织，EIN: 33-1729276",
+    "planningNote": ""
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "亚裔美国人健康与美丽协会",
+      "titleLines": [
+        "赋能女性",
+        "倡导健康",
+        "共建社区"
+      ],
+      "tagline": "团结就是力量",
+      "desc": "植根文化的健康福祉，陪伴人生每一阶段的社区力量",
+      "getInvolved": "参与其中",
+      "ourStory": "我们的故事"
+    },
+    "why": {
+      "eyebrow": "为什么选择 AAWBA",
+      "heading": "三大支柱贯穿我们的一切工作"
+    },
+    "about": {
+      "eyebrow": "关于 AAWBA",
+      "heading": "我们的故事",
+      "desc": "AAWBA 通过贴合文化背景的健康教育、值得信赖的资源以及包容性的社区体验，将亚裔美国女性与家庭紧密联系在一起——让每个人都能感受到被理解、被支持、被赋能。",
+      "learnMore": "了解更多",
+      "missionVisionHeading": "使命与愿景",
+      "missionLabel": "使命 —",
+      "missionText": "AAWBA 通过贴合文化背景的健康教育、值得信赖的资源导航、有意义的社区参与、领导力培养以及负责任的合作伙伴关系，赋能亚裔美国女性及其家庭，助力她们实现终身的福祉与发展机会。",
+      "visionLabel": "愿景 —",
+      "visionText": "我们期望在未来，每一位亚裔美国女性都能被看见、被倾听、被支持、被赋能，从而以自信的姿态追求健康的生活与人生理想，并为家庭和社区创造持久的积极影响。",
+      "valuesHeading": "我们的价值观",
+      "bannerP1": "我们将社区主导的项目与医疗、美容及学术机构的合作相结合，把研究成果与生活经验转化为易于获取的双语（中英文）工作坊、资源与活动。",
+      "bannerP2": "目前我们通过线下活动服务大波士顿都会区，并通过线上工作坊和数字资源辐射全美各地的受众。"
+    },
+    "leadership": {
+      "eyebrow": "领导团队与治理",
+      "heading": "引领我们工作的团队",
+      "founderHeading": "创始人",
+      "boardHeading": "董事会",
+      "staffHeading": "秘书处",
+      "advisoryHeading": "荣誉顾问",
+      "governanceHeading": "治理原则",
+      "governanceDesc": "透明、财务负责与社区问责，是每一项董事会决策的准则。",
+      "policiesLink": "政策与承诺 →",
+      "joinBoardLink": "加入我们的董事会 / 顾问团队 →"
+    },
+    "modal": {
+      "close": "关闭"
+    }
+  },
+  "activities": {
+    "hero": {
+      "eyebrow": "活动",
+      "heading": "相聚、学习、共庆美好时刻。",
+      "desc": "从我们的慈善音乐会到日常健康工作坊，了解近期活动安排，也回顾我们已经取得的成果。"
+    },
+    "upcoming": {
+      "eyebrow": "近期活动",
+      "heading": "接下来的安排"
+    },
+    "past": {
+      "eyebrow": "往期活动",
+      "heading": "我们走过的历程"
+    },
+    "showMore": "查看更多",
+    "showLess": "收起",
+    "calendar": {
+      "heading": "活动日历",
+      "close": "关闭"
+    }
+  },
+  "eventCard": {
+    "featured": "精选",
+    "viewDetails": "查看详情 →"
+  },
+  "eventDetail": {
+    "backToActivities": "← 返回活动页面",
+    "notFound": "未找到该活动",
+    "featured": "精选",
+    "aboutEvent": "活动详情",
+    "gallery": "活动照片",
+    "dateLabel": "日期",
+    "timeLabel": "时间",
+    "locationLabel": "地点",
+    "rsvpRegister": "报名 / 登记",
+    "rsvpGetInvolved": "报名 / 参与其中"
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "联系我们 / 参与其中",
+      "heading": "让我们携手共建。",
+      "desc": "无论是志愿服务、合作伙伴关系，还是加入我们的顾问网络——我们都期待听到您的声音。"
+    },
+    "info": {
+      "eyebrow": "联系我们",
+      "heading": "直接联系我们，或使用下方表单"
+    },
+    "labels": {
+      "email": "邮箱",
+      "phone": "电话",
+      "address": "地址",
+      "followUs": "关注我们"
+    },
+    "form": {
+      "name": "姓名",
+      "email": "邮箱",
+      "message": "留言",
+      "submit": "发送消息"
+    }
+  },
+  "ourWork": {
+    "hero": {
+      "heading": "我们的工作",
+      "desc": "我们提供教育、连接与资源导航。我们根据社区需要设计项目，以清晰、文化适配的方式呈现信息；当参与者的需求超出AAWBA职责范围时，我们帮助其连接具备适当资质的服务资源。"
+    },
+    "pillars": {
+      "eyebrow": "服务支柱",
+      "heading": "我们如何服务社区"
+    },
+    "boundary": {
+      "eyebrow": "专业边界",
+      "heading": "我们的专业边界",
+      "desc": "AAWBA本身不进行疾病诊断、治疗处方、心理治疗或针对个人的医疗建议。网站和项目提供的教育信息不能替代合格专业人士的诊疗。涉及执照要求的服务，只能由具备适当资格的专业人士或经批准的合作机构提供。"
+    },
+    "philosophy": {
+      "eyebrow": "五大核心理念",
+      "brandMotto": "健康·成长·守护"
+    },
+    "cta": "查看我们的项目"
+  },
+  "support": {
+    "hero": {
+      "heading": "支持我们",
+      "desc": "您的支持将帮助AAWBA扩展文化适配的教育、社区项目、可信资源导航及伙伴网络，更好地服务亚裔美国女性及其家庭。"
+    },
+    "methods": {
+      "eyebrow": "支持方式",
+      "heading": "选择您愿意支持的方式",
+      "requiresLabel": "所需披露：",
+      "cta": "联系我们以捐赠",
+      "items": [
+        {
+          "title": "单次或定期捐赠",
+          "disclosure": "支付平台、隐私、退款及收据条款"
+        },
+        {
+          "title": "企业赞助",
+          "disclosure": "书面权益说明、公允价值处理及赞助方披露"
+        },
+        {
+          "title": "指定项目捐赠",
+          "disclosure": "捐赠用途、接受条件及余款使用说明"
+        },
+        {
+          "title": "实物或专业服务支持",
+          "disclosure": "接受审批及估值责任"
+        },
+        {
+          "title": "雇主配捐",
+          "disclosure": "雇主配捐流程及核实要求"
+        }
+      ]
+    },
+    "taxNote": "税务抵扣详情正在核实中，稍后将在此发布。"
+  },
+  "community": {
+    "hero": {
+      "heading": "社区",
+      "desc": "AAWBA正在建设一个没有评判、重视尊严的社区，让亚裔美国女性及其家庭能够学习、分享经验、发现可信资源，并以自己的声音参与改善项目与合作。"
+    },
+    "ways": {
+      "eyebrow": "参与方式",
+      "heading": "找到适合您的参与方式",
+      "cta": "联系我们以加入",
+      "items": [
+        {
+          "title": "订阅社区通讯",
+          "desc": "获取经过审核的资源、活动通知及社区最新动态。"
+        },
+        {
+          "title": "参加活动",
+          "desc": "可选择健康、家庭、身心福祉、美容或社区类项目。"
+        },
+        {
+          "title": "参与志愿服务",
+          "desc": "支持活动执行、语言协助、社区外展或专业审核工作。"
+        },
+        {
+          "title": "分享社区需求",
+          "desc": "填写问卷、参加意见交流会，或提出议题建议。"
+        },
+        {
+          "title": "担任顾问",
+          "desc": "具备资质的专业人士及社区领袖可能会被考虑担任顾问角色。"
+        },
+        {
+          "title": "分享个人故事",
+          "desc": "仅在获得知情同意及明确隐私选择后分享。"
+        }
+      ]
+    },
+    "standards": {
+      "heading": "社区行为标准",
+      "desc": "参与者应尊重交流、保护他人隐私，不实施骚扰或歧视，不提供无资质的医疗建议，披露相关商业利益，并遵守活动安全要求。对于违反上述标准的内容或参与行为，AAWBA可采取管理、删除或终止参与等措施。"
+    },
+    "stories": {
+      "heading": "故事与评价",
+      "desc": "AAWBA仅在取得可记录的授权后发布个人故事。分享者可以选择署名方式，也可以拒绝公开敏感细节。所有评价必须反映真实体验，不得暗示可以保证健康结果。"
+    }
+  },
+  "membership": {
+    "hero": {
+      "heading": "会员",
+      "tagline": "个人会员 · 名誉会员 · 企业会员 · 赞助合作",
+      "desc": "AAWBA的会员体系以使命为中心，通过可衡量的参与机会、可信赖的人际连接和负责任的曝光建立社区——我们不出售治理权、个人数据或医疗内容影响力。"
+    },
+    "tiers": {
+      "eyebrow": "会员类别",
+      "heading": "找到适合您的会员类型"
+    },
+    "individual": {
+      "eyebrow": "个人与名誉会员",
+      "heading": "会员权益一览"
+    },
+    "corporate": {
+      "eyebrow": "企业会员",
+      "heading": "与AAWBA携手合作"
+    },
+    "sponsorship": {
+      "eyebrow": "赞助合作",
+      "heading": "支持一场活动或项目"
+    },
+    "calendar": {
+      "eyebrow": "年度活动日历",
+      "heading": "每年8至10场符合使命的项目"
+    },
+    "network": {
+      "eyebrow": "关系网络",
+      "heading": "可信、基于双方同意的连接"
+    },
+    "joining": {
+      "eyebrow": "加入与行为规范",
+      "heading": "会员如何运作",
+      "text1": "个人会员面向任何认同AAWBA使命、提交真实信息并接受行为准则的成年人开放。年度会员自生效日起为期十二个月；续费通知将在到期前30天发出，并提供30天宽限期。",
+      "text2": "我们希望每位会员都能尊重交流、保护他人隐私，并避免提供无资质的医疗建议或未经许可的推销行为。缴纳会费、赞助或获得名誉身份均不产生组织治理投票权——投票权仅授予依章程与细则认定的法定投票会员。"
+    },
+    "terms": {
+      "heading": "会员条款"
+    },
+    "cta": "成为会员"
+  },
+  "resources": {
+    "hero": {
+      "heading": "资源",
+      "desc": "浏览具有文化适配性、语言清晰并经过相关性、来源质量与负责任传播审核的资源。所有材料仅供教育使用，不能替代合格专业人士的诊疗。"
+    },
+    "categories": {
+      "eyebrow": "分类",
+      "heading": "按主题查找资源",
+      "comingSoon": "资源即将上线",
+      "items": [
+        "女性健康与预防",
+        "心理福祉与压力",
+        "亲子、照护与家庭关系",
+        "美容安全、皮肤健康与自我照护",
+        "医疗与社区资源导航",
+        "新移民与多语言资源"
+      ]
+    }
+  }
+}
