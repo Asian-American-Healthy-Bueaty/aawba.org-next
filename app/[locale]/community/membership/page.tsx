@@ -7,18 +7,11 @@ import {
   TIERS,
   TIERS_FOOTNOTE,
   INDIVIDUAL_HONORARY,
-  CORPORATE_COLUMNS,
-  CORPORATE_ROWS,
-  SPONSORSHIP_COLUMNS,
-  SPONSORSHIP_ROWS,
   CALENDAR,
   NETWORK_PERKS,
   TERMS,
 } from '@/data/membership'
 import logo from '@/assets/logo1.png'
-
-const thClass = 'bg-green-dark/5 px-4 py-3.5 text-left text-[0.78rem] font-bold tracking-[0.03em] text-green-dark uppercase whitespace-nowrap'
-const tdClass = 'px-4 py-3.5 align-top text-left border-t border-border'
 
 export default async function Membership() {
   const t = await getTranslations()
@@ -27,12 +20,8 @@ export default async function Membership() {
 
   const tiers = TIERS.map((tier) => localize(tier, locale))
   const individualHonorary = INDIVIDUAL_HONORARY.map((item) => localize(item, locale))
-  const corporateRows = CORPORATE_ROWS.map((row) => localize(row, locale))
-  const sponsorshipRows = SPONSORSHIP_ROWS.map((row) => localize(row, locale))
   const calendar = CALENDAR.map((item) => localize(item, locale))
   const networkPerks = NETWORK_PERKS.map((item) => localize(item, locale))
-
-  const columnLabel = (col: { label: string; zh: string }) => (isZh ? col.zh : col.label)
 
   return (
     <>
@@ -87,66 +76,6 @@ export default async function Membership() {
                 )}
               </div>
             ))}
-          </div>
-
-          <SectionIntro
-            eyebrow={t('membership.corporate.eyebrow')}
-            heading={t('membership.corporate.heading')}
-            className="mt-16 mb-10"
-          />
-
-          <div className="overflow-x-auto rounded-xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-            <table className="w-full border-collapse text-[0.86rem]">
-              <thead>
-                <tr>
-                  {CORPORATE_COLUMNS.map((col) => (
-                    <th key={col.key} className={thClass}>
-                      {columnLabel(col)}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {corporateRows.map((row) => (
-                  <tr key={row.benefit}>
-                    <td className={`${tdClass} font-semibold whitespace-nowrap text-text-h`}>{row.benefit}</td>
-                    <td className={tdClass}>{row.standard}</td>
-                    <td className={tdClass}>{row.partner}</td>
-                    <td className={tdClass}>{row.leader}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <SectionIntro
-            eyebrow={t('membership.sponsorship.eyebrow')}
-            heading={t('membership.sponsorship.heading')}
-            className="mt-16 mb-10"
-          />
-
-          <div className="overflow-x-auto rounded-xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-            <table className="w-full border-collapse text-[0.86rem]">
-              <thead>
-                <tr>
-                  {SPONSORSHIP_COLUMNS.map((col) => (
-                    <th key={col.key} className={thClass}>
-                      {columnLabel(col)}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {sponsorshipRows.map((row) => (
-                  <tr key={row.level}>
-                    <td className={`${tdClass} font-semibold whitespace-nowrap text-text-h`}>{row.level}</td>
-                    <td className={tdClass}>{row.amount}</td>
-                    <td className={tdClass}>{row.recognition}</td>
-                    <td className={tdClass}>{row.hospitality}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
 
           <SectionIntro
