@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { localize } from '@/lib/localize'
 import { UPCOMING_EVENTS, PAST_EVENTS } from '@/data/events'
 import GallerySlider from '@/components/GallerySlider'
+import EventDescription from '@/components/EventDescription'
 
 export function generateStaticParams() {
   return [...UPCOMING_EVENTS, ...PAST_EVENTS].map((event) => ({ slug: event.slug }))
@@ -52,7 +53,7 @@ export default async function EventDetail({ params }: { params: Promise<{ slug: 
 
       <section className="bg-cream px-6 pt-14 pb-24 max-[640px]:px-5 max-[640px]:pt-10 max-[640px]:pb-16">
         <div className="mx-auto max-w-[1200px]">
-          {event.poster.src ? (
+          {event.hidePosterOnDetail ? null : event.poster.src ? (
             <Image
               src={event.poster.src}
               alt={event.title}
@@ -67,29 +68,14 @@ export default async function EventDetail({ params }: { params: Promise<{ slug: 
           <div className="grid grid-cols-[2fr_1fr] items-start gap-12 max-[860px]:grid-cols-1">
             <div>
               <h2 className="mb-4 text-[1.4rem] text-green-dark">{t('eventDetail.aboutEvent')}</h2>
-              {event.description.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="[&+&]:mt-2">
-                  {section.heading && <h3 className="mb-3 text-[1.1rem] text-green-dark">{section.heading}</h3>}
-                  {section.blocks.map((block, blockIndex) =>
-                    block.type === 'list' ? (
-                      <ul key={blockIndex} className="mb-4 list-disc pl-5 text-[0.98rem] leading-[1.75] text-text">
-                        {block.items?.map((item, itemIndex) => (
-                          <li key={itemIndex} className="mb-1.5">
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p key={blockIndex} className="mb-4 text-[0.98rem] leading-[1.75] text-text">
-                        {block.text}
-                      </p>
-                    ),
-                  )}
-                </div>
-              ))}
+              <EventDescription sections={event.description} alt={event.title} />
 
-              <h2 className="mt-10 mb-4 text-[1.4rem] text-green-dark">{t('eventDetail.gallery')}</h2>
-              <GallerySlider images={event.gallery} altPrefix={event.title} />
+              {event.gallery.length > 0 && (
+                <>
+                  <h2 className="mt-10 mb-4 text-[1.4rem] text-green-dark">{t('eventDetail.gallery')}</h2>
+                  <GallerySlider images={event.gallery} altPrefix={event.title} />
+                </>
+              )}
             </div>
 
             <aside className="flex flex-col gap-1 rounded-xl border border-border bg-white p-7">
