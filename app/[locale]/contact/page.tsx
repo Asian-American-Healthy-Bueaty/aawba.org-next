@@ -16,7 +16,7 @@ export default function Contact() {
 
   const CONTACT_DETAILS = [
     { label: t('contact.labels.email'), value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
-    { label: t('contact.labels.phone'), value: '(781) 363-9023', href: 'tel:+17813639023' },
+    { label: t('contact.labels.phone'), value: '(774) 270-1234', href: 'tel:+17742701234' },
     { label: t('contact.labels.address'), value: '100 Galen St #204\nWatertown, MA 02472' },
   ]
 
