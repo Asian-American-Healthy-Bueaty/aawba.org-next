@@ -111,6 +111,16 @@ export default async function EventDetail({ params }: { params: Promise<{ slug: 
                   {t('eventDetail.rsvpGetInvolved')}
                 </Link>
               )}
+              {event.sponsorUrl && (
+                <a
+                  href={event.sponsorUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 flex items-center justify-center rounded-md border-2 border-green-dark px-[22px] py-3 text-center text-[0.9rem] font-bold text-green-dark no-underline transition-colors hover:bg-green-dark hover:text-white"
+                >
+                  {t('eventDetail.sponsorRegister')}
+                </a>
+              )}
             </aside>
           </div>
         </div>

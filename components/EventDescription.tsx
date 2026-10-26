@@ -94,6 +94,20 @@ function Block({ block, alt }: { block: EventDescriptionBlock; alt: string }) {
         </div>
       )
 
+    case 'link':
+      return (
+        <div className="mb-4 flex justify-center">
+          <a
+            href={block.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md bg-green-dark px-[22px] py-3 text-center text-[0.95rem] font-bold text-white no-underline transition-colors hover:bg-green"
+          >
+            {block.text}
+          </a>
+        </div>
+      )
+
     default:
       return (
         <p

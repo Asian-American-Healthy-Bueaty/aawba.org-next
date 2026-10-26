@@ -115,7 +115,8 @@
     "timeLabel": "Time",
     "locationLabel": "Location",
     "rsvpRegister": "RSVP / Register",
-    "rsvpGetInvolved": "RSVP / Get Involved"
+    "rsvpGetInvolved": "RSVP / Get Involved",
+    "sponsorRegister": "Sponsorship Registration"
   },
   "contact": {
     "hero": {

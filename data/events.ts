@@ -2,7 +2,7 @@ import type { StaticImageData } from 'next/image'
 import { UPCOMING_EVENTS as RAW_UPCOMING, PAST_EVENTS as RAW_PAST } from './events-list'
 
 export interface EventDescriptionBlock {
-  type: 'p' | 'list' | 'image' | 'table' | 'box'
+  type: 'p' | 'list' | 'image' | 'table' | 'box' | 'link'
   text?: string
   items?: string[]
   // 'p' styling, for content copied from articles that use it
@@ -20,6 +20,8 @@ export interface EventDescriptionBlock {
   title?: string
   icon?: StaticImageData
   blocks?: EventDescriptionBlock[]
+  // 'link': button-style external link using `text` as the label
+  href?: string
 }
 
 export interface EventDescriptionSection {
@@ -49,6 +51,8 @@ export interface EventItem {
   summary: string
   description: EventDescriptionSection[]
   registrationUrl?: string
+  // optional second sidebar button for sponsorship sign-up
+  sponsorUrl?: string
   poster: { src?: StaticImageData; label?: string }
   // skip the banner image on the detail page (e.g. the poster already appears inline)
   hidePosterOnDetail?: boolean

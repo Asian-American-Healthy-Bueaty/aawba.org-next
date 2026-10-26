@@ -21,6 +21,9 @@ export const event20261107 = {
   location: 'Josiah Quincy Upper School Auditorium, 900 Washington St. Boston MA 02111',
   summary:
     'On November 7, 2026, the Asian American Wellness and Beauty Association (AAWBA) will host the charity concert "Light of Life · Melody of Love" at the Josiah Quincy Upper School Auditorium in Boston. The event is co-organized and promoted by EA Media.',
+  registrationUrl: 'https://www.zeffy.com/en-US/ticketing/light-of-life-melody-of-love-aawba-2026-charity-concert',
+  sponsorUrl:
+    'https://docs.google.com/forms/d/e/1FAIpQLSfiCnTvI63wKPc75wDhg9jxn8F2kTwBXrmNfMhc5lJ5cIF5LA/viewform',
   hidePosterOnDetail: true,
   description: [
     {

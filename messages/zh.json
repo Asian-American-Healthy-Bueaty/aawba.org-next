@@ -115,7 +115,8 @@
     "timeLabel": "时间",
     "locationLabel": "地点",
     "rsvpRegister": "报名 / 登记",
-    "rsvpGetInvolved": "报名 / 参与其中"
+    "rsvpGetInvolved": "报名 / 参与其中",
+    "sponsorRegister": "赞助登记"
   },
   "contact": {
     "hero": {
