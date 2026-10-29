@@ -9,6 +9,7 @@
       "resources": "Resource",
       "community": "Community",
       "membership": "Membership",
+      "auction": "Auction",
       "support": "Support"
     },
     "cta": "Contact / Get Involved",
@@ -291,6 +292,33 @@
         "Healthcare and community navigation",
         "Newcomer and multilingual resources"
       ]
+    }
+  },
+  "auction": {
+    "hero": {
+      "eyebrow": "Charity Art Auction",
+      "heading": "Art Auction",
+      "desc": "Original Chinese paintings, calligraphy and contemporary works generously donated by artists in support of AAWBA's programs for Asian American women and families."
+    },
+    "artists": {
+      "eyebrow": "{artists} Artists · {works} Works",
+      "heading": "Browse by Artist"
+    },
+    "notice": "Online bidding will open soon. Prices shown are starting bids in US dollars. If you're interested in a piece, please get in touch with us.",
+    "worksCount": "{count, plural, =1 {1 work} other {# works}}",
+    "website": "Artist website",
+    "startingBid": "Starting bid",
+    "biddingSoon": "Bidding opens soon",
+    "viewLarger": "View larger image of {title}",
+    "close": "Close",
+    "previous": "Previous work",
+    "next": "Next work",
+    "readMore": "Read more",
+    "readLess": "Show less",
+    "cta": {
+      "heading": "Interested in a piece?",
+      "desc": "Contact us to register your interest or ask about any of the works. Every bid supports our community programs.",
+      "button": "Contact Us"
     }
   }
 }

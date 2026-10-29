@@ -23,6 +23,7 @@ const NAV_LINKS = [
     path: '/community',
     children: [{ key: 'membership', path: '/community/membership' }],
   },
+  { key: 'auction', path: '/auction' },
   { key: 'support', path: '/support' },
 ] as const
 
